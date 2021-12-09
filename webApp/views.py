@@ -13,10 +13,14 @@ import imutils
 import time
 import os
 
+def landing(request):
+    return render(request, "webApp/landing.html")
 
 def index(request):
     return render(request, 'webApp/index.html')
 
+def about(request):
+    return render(request, 'webApp/about.html')
 
 def detect_and_predict_mask(frame, faceNet, maskNet):
     # grab the dimensions of the frame and then construct a blob
